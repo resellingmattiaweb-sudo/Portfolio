@@ -1,0 +1,35 @@
+<!DOCTYPE html><html lang="it"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Noir Barber – Barber shop</title>
+<meta name="description" content="Sito dimostrativo per un barber shop: servizi, prezzi, orari e prenotazione.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Instrument+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#16130f;--card:#201b15;--g:#c8a46b;--t:#f3ece1;--m:#a89c8a;--l:#332b21}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--t);font-family:"Instrument Sans",system-ui,sans-serif;line-height:1.65}
+a{color:inherit;text-decoration:none}:focus-visible{outline:3px solid var(--g);outline-offset:3px}
+.demo{background:var(--g);color:#16130f;text-align:center;font-size:.85rem;padding:8px 12px}.demo a{text-decoration:underline;font-weight:600}
+.w{width:min(980px,90%);margin:auto}h1,h2,h3{font-family:"Playfair Display",Georgia,serif;line-height:1.05}
+nav{display:flex;justify-content:space-between;align-items:center;padding:24px 0}nav b{font-family:"Playfair Display",serif;font-size:1.5rem;color:var(--g)}
+nav div{display:flex;gap:24px;color:var(--m)}nav div a:hover{color:var(--g)}
+.btn{display:inline-block;background:var(--g);color:#16130f;font-weight:600;padding:14px 28px;border-radius:4px}.btn:hover{background:#dbb87d}
+.hero{padding:80px 0 100px}.hero h1{font-size:clamp(3rem,9vw,7rem);font-weight:800;max-width:760px}
+.hero p{max-width:470px;color:var(--m);font-size:1.15rem;margin:24px 0 32px}
+section{padding:70px 0;border-top:1px solid var(--l)}h2{font-size:clamp(2rem,4.5vw,3.2rem);margin-bottom:30px}
+.p{max-width:620px}.r{display:flex;justify-content:space-between;gap:16px;padding:18px 0;border-bottom:1px solid var(--l)}
+.r h3{font-size:1.3rem}.r span{color:var(--m);font-size:.95rem}.r b{font-family:"Playfair Display",serif;font-size:1.6rem;color:var(--g);font-weight:600}
+.info{display:grid;grid-template-columns:1fr 1fr;gap:40px;color:var(--m)}.info b{color:var(--t)}
+.book{background:var(--card);border:1px solid var(--g);border-radius:12px;padding:52px 28px;text-align:center}.book h2{margin-bottom:10px}.book p{color:var(--m);margin-bottom:26px}
+footer{padding:36px 0;color:var(--m);font-size:.9rem}
+@media(max-width:700px){.info{grid-template-columns:1fr}}@media(max-width:560px){nav div{display:none}}
+</style></head><body>
+<div class="demo">Sito dimostrativo di Mattia Web. <a href="index.html">Torna al portfolio</a> oppure <a href="mailto:reselling.mattia.web@gmail.com?subject=Vorrei%20un%20sito%20come%20questo">vuoi un sito così? Scrivimi</a>.</div>
+<div class="w"><nav><b>Noir Barber</b><div><a href="#servizi">Servizi</a><a href="#dove">Orari</a><a href="#prenota">Prenota</a></div></nav>
+<header class="hero"><h1>Taglio e barba, fatti con calma.</h1><p>Un barber shop dove il tempo è dedicato a te: taglio preciso, barba curata, e un caffè mentre aspetti.</p><a class="btn" href="#prenota">Prenota un appuntamento</a></header></div>
+<section id="servizi"><div class="w p"><h2>Servizi e prezzi</h2>
+<div class="r"><div><h3>Taglio</h3><span>Taglio classico o moderno, con rifinitura</span></div><b>€15</b></div>
+<div class="r"><div><h3>Barba</h3><span>Regolazione con panno caldo e rasoio</span></div><b>€10</b></div>
+<div class="r"><div><h3>Taglio e barba</h3><span>Il servizio completo</span></div><b>€22</b></div>
+<div class="r"><div><h3>Rasatura completa</h3><span>Rasoio tradizionale, su appuntamento</span></div><b>€14</b></div></div></section>
+<section id="dove"><div class="w"><h2>Orari e dove siamo</h2><div class="info"><p><b>Orari</b><br>Martedì–Sabato 9:00–19:30<br>Domenica e lunedì chiuso</p><p><b>Indirizzo</b><br>Via Garibaldi 12<br>(Dati di esempio)</p></div></div></section>
+<section id="prenota"><div class="w"><div class="book"><h2>Prenota il tuo posto</h2><p>Scrivici il giorno, l'orario e il servizio che ti interessa.</p><a class="btn" href="mailto:reselling.mattia.web@gmail.com?subject=Demo%20Noir%20Barber%3A%20prenotazione">Prenota per email</a></div></div></section>
+<footer><div class="w">© Noir Barber. Sito dimostrativo.</div></footer>
+</body></html>
