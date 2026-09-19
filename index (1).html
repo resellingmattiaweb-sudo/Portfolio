@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mattia Web - Siti web moderni e responsive per attività locali, professionisti e piccoli business.">
+  <title>Mattia Web — Siti web moderni</title>
+  <style>
+    :root{
+      --bg:#070707; --card:#101010; --card2:#151515; --text:#f5f5f5;
+      --muted:#a3a3a3; --line:#252525; --accent:#fff; --max:1120px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+    a{color:inherit;text-decoration:none}
+    .container{width:min(var(--max),92%);margin:auto}
+    nav{position:sticky;top:0;z-index:20;background:rgba(7,7,7,.82);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.06)}
+    .navin{height:72px;display:flex;align-items:center;justify-content:space-between}
+    .logo{font-size:1.15rem;font-weight:800;letter-spacing:-.04em}
+    .logo span{color:#888}
+    .navlinks{display:flex;gap:25px;color:#bdbdbd;font-size:.92rem}
+    .navlinks a:hover{color:#fff}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 20px;border:1px solid #fff;border-radius:12px;font-weight:700;transition:.2s}
+    .btn:hover{background:#fff;color:#000;transform:translateY(-2px)}
+    .btn.dark{border-color:var(--line);background:#111;color:#fff}
+    .hero{min-height:calc(100vh - 72px);display:flex;align-items:center;padding:90px 0 80px;position:relative;overflow:hidden}
+    .hero:before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;background:#fff;filter:blur(180px);opacity:.055;right:-180px;top:-100px}
+    .eyebrow{color:#aaa;text-transform:uppercase;letter-spacing:.16em;font-size:.75rem;font-weight:700;margin-bottom:20px}
+    h1{font-size:clamp(3.1rem,8vw,7rem);line-height:.92;letter-spacing:-.075em;max-width:900px}
+    .hero h1 span{color:#777}
+    .lead{max-width:650px;color:#aaa;font-size:1.1rem;margin:28px 0 32px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap}
+    section{padding:100px 0}
+    .section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:38px}
+    .section-head h2{font-size:clamp(2rem,5vw,3.5rem);letter-spacing:-.055em;line-height:1}
+    .section-head p{max-width:430px;color:#999}
+    .grid{display:grid;gap:16px}
+    .services{grid-template-columns:repeat(4,1fr)}
+    .card{background:linear-gradient(145deg,#111,#0c0c0c);border:1px solid var(--line);border-radius:20px;padding:26px;min-height:210px}
+    .num{color:#666;font-size:.78rem;margin-bottom:50px}
+    .card h3{font-size:1.25rem;margin-bottom:9px}
+    .card p{color:#999;font-size:.92rem}
+    .projects{grid-template-columns:repeat(2,1fr)}
+    .project{overflow:hidden;border:1px solid var(--line);border-radius:22px;background:#0e0e0e}
+    .preview{height:310px;padding:24px;display:flex;align-items:end;background:linear-gradient(135deg,#191919,#080808)}
+    .mock{width:100%;height:205px;border:1px solid #333;border-radius:14px;background:#0a0a0a;padding:17px;box-shadow:0 18px 50px rgba(0,0,0,.45)}
+    .mocktop{display:flex;justify-content:space-between;color:#777;font-size:.65rem;margin-bottom:28px}
+    .mocktitle{font-size:2rem;letter-spacing:-.06em;font-weight:800}
+    .mockline{height:7px;background:#292929;border-radius:8px;width:65%;margin-top:13px}
+    .project-body{padding:23px}
+    .tag{display:inline-block;border:1px solid #303030;border-radius:100px;padding:5px 10px;color:#999;font-size:.72rem;margin-bottom:12px}
+    .project-body p{color:#999;margin:8px 0 18px}
+    .textlink{font-weight:700}
+    .textlink:hover{text-decoration:underline}
+    .pricing{grid-template-columns:repeat(3,1fr)}
+    .price{position:relative}
+    .price.featured{border-color:#666}
+    .price .label{font-size:.75rem;color:#aaa;margin-bottom:28px;text-transform:uppercase;letter-spacing:.12em}
+    .price h3{font-size:1.45rem}
+    .price strong{font-size:2.8rem;letter-spacing:-.06em;display:block;margin:10px 0 18px}
+    .price ul{list-style:none;color:#aaa;font-size:.9rem;margin:20px 0 26px}
+    .price li{padding:7px 0;border-bottom:1px solid #222}
+    .about{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+    .about h2{font-size:clamp(2.2rem,5vw,4.5rem);letter-spacing:-.06em;line-height:1}
+    .about p{color:#aaa;margin-top:20px}
+    .facts{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .fact{border:1px solid var(--line);border-radius:18px;padding:25px;background:#0e0e0e}
+    .fact strong{font-size:1.5rem}
+    .fact span{display:block;color:#888;font-size:.85rem;margin-top:5px}
+    .contact{border:1px solid var(--line);border-radius:26px;padding:55px;background:linear-gradient(135deg,#141414,#090909);display:flex;justify-content:space-between;align-items:center;gap:30px}
+    .contact h2{font-size:clamp(2.2rem,5vw,4rem);letter-spacing:-.06em;line-height:1}
+    .contact p{color:#999;margin-top:14px}
+    footer{border-top:1px solid var(--line);padding:28px 0;color:#777;font-size:.82rem}
+    .footin{display:flex;justify-content:space-between;gap:20px}
+    @media(max-width:850px){
+      .services,.pricing{grid-template-columns:1fr 1fr}
+      .about{grid-template-columns:1fr}
+      .contact{display:block}.contact .btn{margin-top:25px}
+    }
+    @media(max-width:620px){
+      .navlinks{display:none}.navin{height:62px}
+      .hero{min-height:auto;padding:85px 0}
+      section{padding:75px 0}
+      .services,.pricing,.projects{grid-template-columns:1fr}
+      .preview{height:260px}.mock{height:175px}
+      .section-head{display:block}.section-head p{margin-top:15px}
+      .facts{grid-template-columns:1fr}
+      .footin{display:block}.footin span{display:block;margin-top:8px}
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="container navin">
+    <a class="logo" href="#">MATTIA<span>WEB</span></a>
+    <div class="navlinks">
+      <a href="#servizi">Servizi</a>
+      <a href="#progetti">Progetti</a>
+      <a href="#prezzi">Prezzi</a>
+      <a href="#contatti">Contatti</a>
+    </div>
+    <a class="btn" href="mailto:reselling.mattia.web@gmail.com">Parliamone</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container">
+    <div class="eyebrow">Web design · Responsive · Moderno</div>
+    <h1>Siti che fanno<br><span>una buona prima impressione.</span></h1>
+    <p class="lead">Creo siti web moderni, veloci e ottimizzati per smartphone per attività locali, professionisti e piccoli business.</p>
+    <div class="actions">
+      <a class="btn" href="#progetti">Vedi i progetti</a>
+      <a class="btn dark" href="mailto:reselling.mattia.web@gmail.com">Contattami</a>
+    </div>
+  </div>
+</header>
+
+<section id="servizi">
+  <div class="container">
+    <div class="section-head">
+      <h2>Cosa posso<br>fare per te.</h2>
+      <p>Un servizio semplice: dal primo design alla pubblicazione del sito, con un risultato pensato per essere chiaro e professionale.</p>
+    </div>
+    <div class="grid services">
+      <article class="card"><div class="num">01 / DESIGN</div><h3>Web design</h3><p>Layout moderni e personalizzati in base allo stile della tua attività.</p></article>
+      <article class="card"><div class="num">02 / MOBILE</div><h3>Responsive</h3><p>Il sito si adatta a smartphone, tablet e computer senza perdere qualità.</p></article>
+      <article class="card"><div class="num">03 / LANDING</div><h3>Landing page</h3><p>Pagine pensate per presentare un servizio, un prodotto o una promozione.</p></article>
+      <article class="card"><div class="num">04 / RESTYLING</div><h3>Restyling</h3><p>Rinnovo grafico di siti esistenti per renderli più moderni e ordinati.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="progetti">
+  <div class="container">
+    <div class="section-head">
+      <h2>Progetti<br>in evidenza.</h2>
+      <p>Alcuni concept realizzati per mostrare come può essere trasformata la presenza online di un'attività.</p>
+    </div>
+    <div class="grid projects">
+      <article class="project">
+        <div class="preview">
+          <div class="mock">
+            <div class="mocktop"><span>NOIR BARBER</span><span>01</span></div>
+            <div class="mocktitle">NOIR<br>BARBER.</div>
+            <div class="mockline"></div>
+          </div>
+        </div>
+        <div class="project-body">
+          <span class="tag">Barber shop · Demo</span>
+          <h3>Noir Barber</h3>
+          <p>Concept dark e minimal per un barber shop, con focus su immagine, servizi e contatto.</p>
+          <a class="textlink" href="https://resellingmattiaweb-sudo.github.io/noir-barber/" target="_blank" rel="noopener">Apri progetto ↗</a>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="preview">
+          <div class="mock">
+            <div class="mocktop"><span>FIT LAB</span><span>02</span></div>
+            <div class="mocktitle">FIT<br>LAB.</div>
+            <div class="mockline"></div>
+          </div>
+        </div>
+        <div class="project-body">
+          <span class="tag">Fitness · Concept</span>
+          <h3>Fit Lab</h3>
+          <p>Concept per palestra o personal trainer, con presentazione servizi e call to action.</p>
+          <span class="textlink">Concept demo</span>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="preview">
+          <div class="mock">
+            <div class="mocktop"><span>CASA 21</span><span>03</span></div>
+            <div class="mocktitle">CASA<br>21.</div>
+            <div class="mockline"></div>
+          </div>
+        </div>
+        <div class="project-body">
+          <span class="tag">Ristorante · Concept</span>
+          <h3>Casa 21</h3>
+          <p>Concept elegante per ristorante, con menu, informazioni e contatti facilmente raggiungibili.</p>
+          <span class="textlink">Concept demo</span>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="preview">
+          <div class="mock">
+            <div class="mocktop"><span>STUDIO 04</span><span>04</span></div>
+            <div class="mocktitle">STUDIO<br>04.</div>
+            <div class="mockline"></div>
+          </div>
+        </div>
+        <div class="project-body">
+          <span class="tag">Professionista · Concept</span>
+          <h3>Studio 04</h3>
+          <p>Concept per professionisti e servizi locali, progettato per comunicare affidabilità.</p>
+          <span class="textlink">Concept demo</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="prezzi">
+  <div class="container">
+    <div class="section-head">
+      <h2>Prezzi<br>semplici.</h2>
+      <p>Pacchetti indicativi per partire. Il prezzo finale viene definito in base alle pagine e alle funzioni richieste.</p>
+    </div>
+    <div class="grid pricing">
+      <article class="card price">
+        <div class="label">01 · Basic</div><h3>Essenziale</h3><strong>€49</strong>
+        <ul><li>1 pagina</li><li>Design responsive</li><li>Sezione contatti</li><li>Pubblicazione online</li></ul>
+        <a class="btn dark" href="mailto:reselling.mattia.web@gmail.com?subject=Richiesta%20sito%20Basic">Richiedi info</a>
+      </article>
+      <article class="card price featured">
+        <div class="label">02 · Standard</div><h3>Completo</h3><strong>€79</strong>
+        <ul><li>Fino a 4 sezioni/pagine</li><li>Design personalizzato</li><li>Ottimizzazione mobile</li><li>Pubblicazione online</li></ul>
+        <a class="btn" href="mailto:reselling.mattia.web@gmail.com?subject=Richiesta%20sito%20Standard">Richiedi info</a>
+      </article>
+      <article class="card price">
+        <div class="label">03 · Premium</div><h3>Su misura</h3><strong>€129</strong>
+        <ul><li>Struttura personalizzata</li><li>Più sezioni/pagine</li><li>Design avanzato</li><li>Funzioni extra su richiesta</li></ul>
+        <a class="btn dark" href="mailto:reselling.mattia.web@gmail.com?subject=Richiesta%20sito%20Premium">Richiedi info</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container about">
+    <div>
+      <div class="eyebrow">Chi c'è dietro Mattia Web</div>
+      <h2>Piccoli business.<br>Grandi prime impressioni.</h2>
+    </div>
+    <div>
+      <p>Mi occupo di creare siti web semplici, moderni e accessibili per chi vuole presentare meglio la propria attività online senza complicarsi la vita.</p>
+      <p>Parto dalle esigenze del cliente e costruisco una pagina chiara, responsive e coerente con il suo stile.</p>
+      <div class="facts" style="margin-top:25px">
+        <div class="fact"><strong>100%</strong><span>Responsive</span></div>
+        <div class="fact"><strong>Design</strong><span>Personalizzato</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contatti">
+  <div class="container">
+    <div class="contact">
+      <div>
+        <div class="eyebrow">Hai un progetto?</div>
+        <h2>Facciamolo<br>partire.</h2>
+        <p>Scrivimi cosa ti serve e valutiamo insieme il sito più adatto.</p>
+      </div>
+      <a class="btn" href="mailto:reselling.mattia.web@gmail.com?subject=Richiesta%20informazioni%20sito">Scrivimi via email →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container footin">
+    <span>© 2026 Mattia Web</span>
+    <span>reselling.mattia.web@gmail.com</span>
+  </div>
+</footer>
+
+</body>
+</html>
