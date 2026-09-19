@@ -1,0 +1,39 @@
+<!DOCTYPE html><html lang="it"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Fit Lab – Palestra</title>
+<meta name="description" content="Sito dimostrativo per una palestra: corsi, abbonamenti e prima lezione gratuita.">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Instrument+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#141815;--card:#1e241f;--f:#c6f135;--t:#f1f4ee;--m:#a4ada4}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--t);font-family:"Instrument Sans",system-ui,sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}:focus-visible{outline:3px solid var(--f);outline-offset:3px}
+.demo{background:var(--f);color:#141815;text-align:center;font-size:.85rem;padding:8px 12px}.demo a{text-decoration:underline;font-weight:600}
+.w{width:min(1040px,90%);margin:auto}
+h1,h2,.n{font-family:Anton,Impact,sans-serif;font-weight:400;text-transform:uppercase;line-height:1}
+nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0}nav b{font-family:Anton,sans-serif;font-weight:400;font-size:1.6rem;color:var(--f)}
+nav div{display:flex;gap:24px;color:var(--m)}nav div a:hover{color:var(--t)}
+.btn{display:inline-block;background:var(--f);color:#141815;font-weight:600;padding:15px 26px;border-radius:6px;transition:transform .15s}.btn:hover{transform:translateY(-2px)}
+.hero{padding:70px 0 100px}.hero h1{font-size:clamp(3.4rem,11vw,8rem);max-width:800px}.hero h1 em{font-style:normal;color:var(--f)}
+.hero p{max-width:480px;color:var(--m);font-size:1.15rem;margin:24px 0 32px}
+section{padding:70px 0;border-top:1px solid #2a322b}h2{font-size:clamp(2.2rem,5vw,3.6rem);margin-bottom:34px}
+.g{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.c{background:var(--card);border-radius:10px;padding:26px}.c h3{font-size:1.25rem;margin-bottom:6px}.c p{color:var(--m)}.c small{display:block;margin-top:14px;color:var(--f);font-weight:600}
+.n{font-size:3rem;color:var(--f);margin:10px 0}.c ul{list-style:none;color:var(--m)}.c li{padding:6px 0;border-top:1px solid #2d362e}
+.cta{background:var(--f);color:#141815;border-radius:14px;padding:50px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.cta h2{margin:0}.cta .btn{background:#141815;color:var(--f)}
+footer{padding:36px 0;color:var(--m);font-size:.9rem}
+@media(max-width:800px){.g{grid-template-columns:1fr}.cta{padding:32px 24px}}@media(max-width:560px){nav div{display:none}}
+</style></head><body>
+<div class="demo">Sito dimostrativo di Mattia Web. <a href="index.html">Torna al portfolio</a> oppure <a href="mailto:reselling.mattia.web@gmail.com?subject=Vorrei%20un%20sito%20come%20questo">vuoi un sito così? Scrivimi</a>.</div>
+<div class="w"><nav><b>Fit Lab</b><div><a href="#corsi">Corsi</a><a href="#abbonamenti">Abbonamenti</a><a href="#prova">Prova</a></div></nav>
+<header class="hero"><h1>Allenati meglio. <em>Torna domani.</em></h1><p>Sala pesi, corsi di gruppo e allenatori che ti seguono. Apri l'app del tuo telefono e prenota il tuo posto.</p><a class="btn" href="#prova">Prima lezione gratuita</a></header></div>
+<section id="corsi"><div class="w"><h2>I corsi</h2><div class="g">
+<div class="c"><h3>Sala pesi guidata</h3><p>Un programma a tua misura, con un allenatore che corregge la tecnica.</p><small>Lun, Mer, Ven ore 18:00</small></div>
+<div class="c"><h3>Functional training</h3><p>Circuiti a corpo libero e con attrezzi, per tutti i livelli.</p><small>Mar e Gio ore 19:00</small></div>
+<div class="c"><h3>Mobilità e stretching</h3><p>Lezione di recupero per muoverti meglio e allenarti più a lungo.</p><small>Sabato ore 10:00</small></div></div></div></section>
+<section id="abbonamenti"><div class="w"><h2>Abbonamenti</h2><div class="g">
+<div class="c"><h3>Mensile</h3><div class="n">€39</div><ul><li>Accesso alla sala</li><li>Corsi di gruppo</li></ul></div>
+<div class="c"><h3>Trimestrale</h3><div class="n">€99</div><ul><li>Accesso alla sala</li><li>Corsi di gruppo</li><li>1 scheda personalizzata</li></ul></div>
+<div class="c"><h3>Annuale</h3><div class="n">€329</div><ul><li>Accesso alla sala</li><li>Corsi di gruppo</li><li>Schede illimitate</li></ul></div></div></div></section>
+<section id="prova"><div class="w"><div class="cta"><h2>Prova una lezione,<br>senza impegno.</h2><a class="btn" href="mailto:reselling.mattia.web@gmail.com?subject=Demo%20Fit%20Lab%3A%20prima%20lezione">Prenota la prova</a></div></div></section>
+<footer><div class="w">Fit Lab, Via del Campo 8. Aperto dal lunedì al sabato, 7:00–21:00. (Dati di esempio.)</div></footer>
+</body></html>
